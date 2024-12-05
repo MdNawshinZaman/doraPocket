@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "name": "Asus ROG Strix SCAR 18 G834JYR",
+        "category": "Gaming Laptop",
+        "imageUrl": "images/product/large-size/1.jpg",
+        "sticker": "New",
+        "price": 550000,
+        "oldPrice": 0,
+        "discount": 0,
+        "description": "High-performance gaming laptop."
+    },
+    {
+        "id": 2,
+        "name": "Sony Alpha a7 III Mirrorless Digital Camera (Body Only)",
+        "category": "Camera",
+        "imageUrl": "images/product/large-size/2.jpg",
+        "sticker": "New",
+        "price": 145000,
+        "oldPrice": 147000,
+        "discount": 7,
+        "description": "Professional mirrorless camera with advanced features."
+    },
+    {
+        "id": 3,
+        "name": "Sony Alpha a7 III Mirrorless Digital Camera (Body Only)",
+        "category": "Camera",
+        "imageUrl": "images/product/large-size/2.jpg",
+        "sticker": "New",
+        "price": 145000,
+        "oldPrice": 147000,
+        "discount": 7,
+        "description": "Professional mirrorless camera with advanced features."
+    },
+    {
+        "id": 4,
+        "name": "Sony Alpha a7 III Mirrorless Digital Camera (Body Only)",
+        "category": "Camera",
+        "imageUrl": "images/product/large-size/2.jpg",
+        "sticker": "New",
+        "price": 145000,
+        "oldPrice": 147000,
+        "discount": 7,
+        "description": "Professional mirrorless camera with advanced features."
+    },
+    {
+        "id": 5,
+        "name": "Sony Alpha a7 III Mirrorless Digital Camera (Body Only)",
+        "category": "Camera",
+        "imageUrl": "images/product/large-size/2.jpg",
+        "sticker": "New",
+        "price": 145000,
+        "oldPrice": 147000,
+        "discount": 7,
+        "description": "Professional mirrorless camera with advanced features."
+    },
+    {
+        "id": 6,
+        "name": "Sony Alpha a7 III Mirrorless Digital Camera (Body Only)",
+        "category": "Camera",
+        "imageUrl": "images/product/large-size/2.jpg",
+        "sticker": "New",
+        "price": 145000,
+        "oldPrice": 147000,
+        "discount": 7,
+        "description": "Professional mirrorless camera with advanced features."
+    }
+]
