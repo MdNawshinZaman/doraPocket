@@ -5,22 +5,24 @@
         "category": "Gaming Laptop",
         "imageUrl": "images/product/large-size/1.jpg",
         "sticker": "New",
-        "price": 550000,
-        "oldPrice": 0,
-        "discount": 0,
+        "price": 500000,
+        "oldPrice": 550000,
+        "discount": 9,
         "description": "High-performance gaming laptop."
     },
+
     {
         "id": 2,
-        "name": "Sony Alpha a7 III Mirrorless Digital Camera (Body Only)",
-        "category": "Camera",
-        "imageUrl": "images/product/large-size/2.jpg",
+        "name": "MacBook Pro M2 13-Inch 8/256GB Space Gray",
+        "category": "Laptop",
+        "imageUrl": "images/product/large-size/5.jpg",
         "sticker": "New",
-        "price": 145000,
-        "oldPrice": 147000,
-        "discount": 7,
-        "description": "Professional mirrorless camera with advanced features."
+        "price": 100000,
+        "oldPrice": 150000,
+        "discount": 33,
+        "description": "High-performance laptop with advanced features."
     },
+
     {
         "id": 3,
         "name": "Sony Alpha a7 III Mirrorless Digital Camera (Body Only)",
@@ -32,37 +34,104 @@
         "discount": 7,
         "description": "Professional mirrorless camera with advanced features."
     },
+    
     {
         "id": 4,
-        "name": "Sony Alpha a7 III Mirrorless Digital Camera (Body Only)",
-        "category": "Camera",
-        "imageUrl": "images/product/large-size/2.jpg",
+        "name": "Play Station 5 - PS5 - Slim Edition",
+        "category": "Game Console",
+        "imageUrl": "images/product/large-size/3.jpg",
         "sticker": "New",
-        "price": 145000,
-        "oldPrice": 147000,
+        "price": 67500,
+        "oldPrice": 72500,
         "discount": 7,
-        "description": "Professional mirrorless camera with advanced features."
+        "description": "High-performance game console with advanced features."
     },
     {
         "id": 5,
-        "name": "Sony Alpha a7 III Mirrorless Digital Camera (Body Only)",
-        "category": "Camera",
-        "imageUrl": "images/product/large-size/2.jpg",
+        "name": "DJI Mavic 3 Pro Fly More Combo 4K Drone With Remote Controller",
+        "category": "Drone",
+        "imageUrl": "images/product/large-size/4.jpg",
         "sticker": "New",
-        "price": 145000,
-        "oldPrice": 147000,
-        "discount": 7,
-        "description": "Professional mirrorless camera with advanced features."
+        "price": 352900,
+        "oldPrice": 392900,
+        "discount": 10,
+        "description": "Professional drone with advanced features."
     },
     {
         "id": 6,
-        "name": "Sony Alpha a7 III Mirrorless Digital Camera (Body Only)",
-        "category": "Camera",
-        "imageUrl": "images/product/large-size/2.jpg",
+        "name": "MiPad 10.9 10th Gen - 2022",
+        "category": "Tablet",
+        "imageUrl": "images/product/large-size/8.jpg",
         "sticker": "New",
-        "price": 145000,
-        "oldPrice": 147000,
+        "price": 48000,
+        "oldPrice": 55000,
+        "discount": 13,
+        "description": "High-performance tablet with advanced features."
+    },
+    {
+        "id": 7,
+        "name": "Galaxy S24 Ultra 5G",
+        "category": "Smartphone",
+        "imageUrl": "images/product/large-size/10.jpg",
+        "sticker": "New",
+        "price": 102000,
+        "oldPrice": 120000,
+        "discount": 15,
+        "description": "High-performance smartphone with advanced features."
+    },
+    {
+        "id": 8,
+        "name": "Asus ROG Fusion II 500 RGB Gaming Headset",
+        "category": "Headset",
+        "imageUrl": "images/product/large-size/6.jpg",
+        "sticker": "New",
+        "price": 27000,
+        "oldPrice": 29000,
         "discount": 7,
-        "description": "Professional mirrorless camera with advanced features."
+        "description": "High-performance gaming headset with advanced features."
+    },
+    {
+        "id": 9,
+        "name": "iPhone 16 Pro Max",
+        "category": "Smartphone",
+        "imageUrl": "images/product/large-size/12.jpg",
+        "sticker": "New",
+        "price": 170000,
+        "oldPrice": 190000,
+        "discount": 11,
+        "description": "High-performance smartphone with advanced features."
+    },
+    {
+        "id": 10,
+        "name": " Wireless Earbuds (Never Settle)",
+        "category": "Earbuds",
+        "imageUrl": "images/product/large-size/7.jpg",
+        "sticker": "New",
+        "price": 6500,
+        "oldPrice": 7000,
+        "discount": 7,
+        "description": "High-performance earbuds with advanced features."
+    },
+    {
+        "id": 11,
+        "name": "ROG Phone 8 Pro",
+        "category": "Smartphone",
+        "imageUrl": "images/product/large-size/9.jpg",
+        "sticker": "New",
+        "price": 95000,
+        "oldPrice": 110000,
+        "discount": 14,
+        "description": "High-performance smartphone with advanced features."
+    },
+    {
+        "id": 12,
+        "name": "High-Performance Gaming PC Setup (Intel Core i9 12th Gen, RTX 4090, 32GB RAM, 1TB SSD)",
+        "category": "Gaming PC",
+        "imageUrl": "images/product/large-size/13.jpg",
+        "sticker": "New",
+        "price": 150000,
+        "oldPrice": 180000,
+        "discount": 17,
+        "description": "High-performance gaming PC setup with advanced features."
     }
 ]

@@ -18,17 +18,23 @@
                     <div class="header-top-right">
                         <ul class="ht-menu">
                             <!-- Setting part start -->
+                             <li>  </li>
                             <li>
                                 <div class="ht-setting-trigger"><span>Setting</span></div>
                                 <div class="setting ht-setting">
                                     <ul class="ht-setting-list">
                                         <li><a href="login-register.html">My Account</a></li>
                                         <li><a href="checkout.html">Checkout</a></li>
-                                        <li><a href="login-register.html">Sign In</a></li>
+                                        <li><a th:href="@{/login-register}">Sign In</a></li>
                                     </ul>
                                 </div>
                             </li>
                             <!-- Setting part end -->
+                            <li th:if="${session.loggedInUser != null}">
+                            <span>Welcome, <span th:text="${session.loggedInUser.email}"></span> <a th:href="@{/logout}" class="logout-button">| Logout</a></span>
+                           
+                            
+                            </li>
                             <!-- Currency part start -->
                             <li>
                                 <span class="currency-selector-wrapper">Currency :</span>
@@ -83,7 +89,7 @@
                     <!-- Searce box part start -->
                     <form action="#" class="hm-searchbox">
                         <select class="nice-select select-search-category">
-                            <option value="0">All</option>                         
+                            <!-- <option value="0">All</option>                         
                             <option value="10">Laptops</option>                     
                             <option value="17">- -  Gaming laptop</option>                    
                             <option value="20">All Videos</option>                     
@@ -153,7 +159,7 @@
                             <option value="14">headphone</option>                                
                             <option value="15">Smartwatch</option>                           
                             <option value="16">Accessories</option>
-                        </select>
+                        </select> -->
                         <input type="text" placeholder="Enter your search key ...">
                         <button class="li-btn" type="submit"><i class="fa fa-search"></i></button>
                     </form>
@@ -174,44 +180,20 @@
                             <li class="hm-minicart">
                                 <div class="hm-minicart-trigger">
                                     <span class="item-icon"></span>
-                                    <span class="item-text">0.00 BDT
-                                        <span class="cart-item-count">2</span>
+                                    <span class="item-text">
+                                      
+                                        <span class="cart-item-count" th:text="${totalProducts}">0</span>
                                     </span>
                                 </div>
                                 <span></span>
                                 <div class="minicart">
-                                    <ul class="minicart-product-list">
-                                        <li>
-                                            <a href="single-product.html" class="minicart-product-image">
-                                                <img src="images/product/small-size/3.jpg" alt="cart products">
-                                            </a>
-                                            <div class="minicart-product-details">
-                                                <h6><a href="single-product.html">Aenean eu tristique</a></h6>
-                                                <span>£80 x 1</span>
-                                            </div>
-                                            <button class="close">
-                                                <i class="fa fa-close"></i>
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <a href="single-product.html" class="minicart-product-image">
-                                                <img src="images/product/small-size/4.jpg" alt="cart products">
-                                            </a>
-                                            <div class="minicart-product-details">
-                                                <h6><a href="single-product.html">Aenean eu tristique</a></h6>
-                                                <span>£80 x 1</span>
-                                            </div>
-                                            <button class="close">
-                                                <i class="fa fa-close"></i>
-                                            </button>
-                                        </li>
-                                    </ul>
-                                    <p class="minicart-total">SUBTOTAL: <span>0.00 BDT</span></p>
+                                    
+                                    <p class="minicart-total">SUBTOTAL: <span  th:text="${totalPrice}">0.00 BDT</span></p>
                                     <div class="minicart-button">
-                                        <a href="checkout.html" class="li-button li-button-dark li-button-fullwidth li-button-sm">
+                                        <a th:href="@{/checkout}" class="li-button li-button-dark li-button-fullwidth li-button-sm">
                                             <span>View Full Cart</span>
                                         </a>
-                                        <a href="checkout.html" class="li-button li-button-fullwidth li-button-sm">
+                                        <a th:href="@{/checkout}" class="li-button li-button-fullwidth li-button-sm">
                                             <span>Checkout</span>
                                         </a>
                                     </div>

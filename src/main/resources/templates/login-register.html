@@ -32,7 +32,6 @@
     <div class="body-wrapper">
         <!-- Begin Header Area -->
         <header>
-            <!-- Header Top Area -->
             <div class="header-top">
                 <div class="container">
                     <div class="row">
@@ -48,74 +47,17 @@
                         <div class="col-lg-9 col-md-8">
                             <div class="header-top-right">
                                 <ul class="ht-menu">
-                                    <!-- Setting Area -->
-                                    <li>
-                                        <div class="ht-setting-trigger"><span>Setting</span></div>
-                                        <div class="setting ht-setting">
-                                            <ul class="ht-setting-list">
-                                                <li><a th:href="@{/login-register}">My Account</a></li>
-                                                <li><a th:href="@{/checkout}">Checkout</a></li>
-                                                <li><a th:href="@{/login-register}">Sign In</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <!-- Currency Area -->
-                                    <li>
-                                        <span class="currency-selector-wrapper">Currency :</span>
-                                        <div class="ht-currency-trigger"><span>USD $</span></div>
-                                        <div class="currency ht-currency">
-                                            <ul class="ht-setting-list">
-                                                <li><a href="#">BDT</a></li>
-                                                <li class="active"><a href="#">USD $</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <!-- Language Area -->
-                                    <li>
-                                        <span class="language-selector-wrapper">Language :</span>
-                                        <div class="ht-language-trigger"><span>English</span></div>
-                                        <div class="language ht-language">
-                                            <ul class="ht-setting-list">
-                                                <li class="active"><a href="#"><img th:src="@{/images/menu/flag-icon/1.jpg}" alt="">English</a></li>
-                                                <li><a href="#"><img th:src="@{/images/menu/flag-icon/2.jpg}" alt="">Bangla</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
+                                    <li><a th:href="@{/login-register}">My Account</a></li>
+                                    <li><a th:href="@{/checkout}">Checkout</a></li>
+                                    <li><a th:href="@{/login-register}">Sign In</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Header Middle Area -->
-            <div class="header-middle pl-sm-0 pr-sm-0 pl-xs-0 pr-xs-0">
-                <div class="container">
-                    <div class="row">
-                        <!-- Header Logo Area -->
-                        <div class="col-lg-3">
-                            <div class="logo pb-sm-30 pb-xs-30">
-                                <a th:href="@{/}">
-                                    <img th:src="@{/images/menu/logo/1.jpg}" alt="Logo">
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Header Middle Searchbox Area -->
-                        <div class="col-lg-9 pl-0 ml-sm-15 ml-xs-15">
-                            <form action="#" class="hm-searchbox">
-                                <select class="nice-select select-search-category">
-                                    <option value="0">All</option>
-                                    <option value="10">Laptops</option>
-                                    <option value="17">Prime Video</option>
-                                    <option value="18">Computers</option>
-                                </select>
-                                <input type="text" placeholder="Enter your search key ...">
-                                <button class="li-btn" type="submit"><i class="fa fa-search"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </header>
+
         <!-- Breadcrumb Area -->
         <div class="breadcrumb-area">
             <div class="container">
@@ -127,6 +69,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Login Content Area -->
         <div class="page-section mb-60">
             <div class="container">
@@ -139,11 +82,11 @@
                                 <div class="row">
                                     <div class="col-md-12 col-12 mb-20">
                                         <label>Email Address*</label>
-                                        <input class="mb-0" type="email" name="email" placeholder="Email Address">
+                                        <input class="mb-0" type="email" name="email" placeholder="Email Address" required>
                                     </div>
                                     <div class="col-12 mb-20">
                                         <label>Password</label>
-                                        <input class="mb-0" type="password" name="password" placeholder="Password">
+                                        <input class="mb-0" type="password" name="password" placeholder="Password" required>
                                     </div>
                                     <div class="col-md-12">
                                         <button class="register-button mt-0">Login</button>
@@ -152,6 +95,7 @@
                             </div>
                         </form>
                     </div>
+
                     <!-- Register Form -->
                     <div class="col-lg-6">
                         <form th:action="@{/register}" method="post">
@@ -160,23 +104,19 @@
                                 <div class="row">
                                     <div class="col-md-6 col-12 mb-20">
                                         <label>First Name</label>
-                                        <input class="mb-0" type="text" name="firstName" placeholder="First Name">
+                                        <input class="mb-0" type="text" name="fname" placeholder="First Name" required>
                                     </div>
                                     <div class="col-md-6 col-12 mb-20">
                                         <label>Last Name</label>
-                                        <input class="mb-0" type="text" name="lastName" placeholder="Last Name">
+                                        <input class="mb-0" type="text" name="lname" placeholder="Last Name" required>
                                     </div>
                                     <div class="col-md-12 mb-20">
                                         <label>Email Address*</label>
-                                        <input class="mb-0" type="email" name="email" placeholder="Email Address">
+                                        <input class="mb-0" type="email" name="email" placeholder="Email Address" required>
                                     </div>
                                     <div class="col-md-6 mb-20">
                                         <label>Password</label>
-                                        <input class="mb-0" type="password" name="password" placeholder="Password">
-                                    </div>
-                                    <div class="col-md-6 mb-20">
-                                        <label>Confirm Password</label>
-                                        <input class="mb-0" type="password" name="confirmPassword" placeholder="Confirm Password">
+                                        <input class="mb-0" type="password" name="password" placeholder="Password" required>
                                     </div>
                                     <div class="col-12">
                                         <button class="register-button mt-0">Register</button>
@@ -189,14 +129,10 @@
             </div>
         </div>
     </div>
+
     <!-- Scripts -->
     <script th:src="@{/js/vendor/jquery-1.12.4.min.js}"></script>
     <script th:src="@{/js/bootstrap.min.js}"></script>
     <script th:src="@{/js/main.js}"></script>
-    
-
-    <th:block th:insert="fragments/scripts :: scripts"></th:block>
-
-
 </body>
 </html>

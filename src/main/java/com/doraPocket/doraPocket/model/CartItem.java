@@ -25,6 +25,10 @@ public class CartItem {
     @Transient // This field is calculated, not stored in the database
     private double totalPrice;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
+
     public double getTotalPrice() {
         return this.price * this.quantity;
     }

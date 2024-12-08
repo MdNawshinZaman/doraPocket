@@ -1,12 +1,22 @@
 package com.doraPocket.doraPocket.controller;
 
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.doraPocket.doraPocket.model.CartItem;
 import com.doraPocket.doraPocket.service.CartService;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import com.doraPocket.doraPocket.model.User;
 
 import jakarta.servlet.http.HttpSession;
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/cart")
@@ -20,19 +30,40 @@ public class CartController {
     }
 
     @GetMapping
-    public ResponseEntity<List<CartItem>> getAllCartItems() {
-        List<CartItem> cartItems = cartService.getAllCartItems();
-        cartItems.forEach(item -> item.setTotalPrice(item.getTotalPrice())); // Ensure total price is calculated
+    public ResponseEntity<?> getCartItemsByUser(HttpSession session) {
+        // Retrieve the logged-in user from the session
+        User loggedInUser = (User) session.getAttribute("loggedInUser");
+        if (loggedInUser == null) {
+            return ResponseEntity.status(401).body("User not logged in");
+        }
+
+        // Fetch the cart items for the logged-in user
+        List<CartItem> cartItems = cartService.getAllCartItemsByUserId(loggedInUser.getId());
+
+        // Ensure total prices are calculated
+        cartItems.forEach(item -> item.setTotalPrice(item.getTotalPrice()));
+
+        // Return the cart items
         return ResponseEntity.ok(cartItems);
     }
 
+
     @PostMapping("/add")
     public ResponseEntity<?> addToCart(@RequestBody CartItem cartItem, HttpSession session) {
-        if (session.getAttribute("user") == null) {
+        // Check if the user is logged in
+        User loggedInUser = (User) session.getAttribute("loggedInUser");
+        if (loggedInUser == null) {
             return ResponseEntity.status(401).body("User not logged in");
         }
-        return ResponseEntity.ok(cartService.addToCart(cartItem));
+    
+        // Set the user for the cart item
+        cartItem.setUser(loggedInUser);
+    
+        // Proceed to add the item to the cart
+        CartItem savedCartItem = cartService.addToCart(cartItem);
+        return ResponseEntity.ok(savedCartItem);
     }
+    
 
     @DeleteMapping("/remove/{id}")
     public ResponseEntity<Void> removeFromCart(@PathVariable Long id) {
