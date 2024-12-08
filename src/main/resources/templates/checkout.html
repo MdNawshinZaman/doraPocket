@@ -105,7 +105,10 @@
                                 </table>
                             </div>
                             <div class="order-button-payment">
-                                <button id="place-order-btn" class="btn btn-primary">Place Order</button>
+                                <form th:action="@{/gateway}" method="get">
+                                    <button id="place-order-btn" class="btn btn-primary">Place Order</button>
+                                </form>
+                                
                             </div>
                         </div>
                     </div>
@@ -117,7 +120,15 @@
         <th:block th:insert="fragments/footer :: footer"></th:block>
     </div>
 
-      
+    <script>
+        $(document).ready(function () {
+            $('#place-order-btn').click(function (event) {
+                event.preventDefault(); // Prevent default form submission
+                window.location.href = '/gateway'; // Redirect to gateway page
+            });
+        });
+    </script>
+    
     <script th:src="@{/js/vendor/jquery-1.12.4.min.js}"></script>
     <!-- Popper js -->
     <script th:src="@{/js/vendor/popper.min.js}"></script>
