@@ -1,11 +1,12 @@
 package com.doraPocket.doraPocket.service;
 
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
 import com.doraPocket.doraPocket.model.CartItem;
 import com.doraPocket.doraPocket.model.User;
 import com.doraPocket.doraPocket.repository.CartItemRepository;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class CartService {
@@ -109,9 +110,6 @@ public class CartService {
     /**
      * Clear the cart for a specific user.
      */
-    public void clearCartByUserId(Long userId) {
-        cartItemRepository.deleteAll(cartItemRepository.findByUserId(userId));
-    }
 
     /**
      * Calculate the total price for all cart items (all users).
@@ -131,6 +129,10 @@ public class CartService {
                 .stream()
                 .mapToDouble(CartItem::getTotalPrice)
                 .sum();
+    }
+
+    public void clearCartByUserId(Long userId) {
+        cartItemRepository.deleteAll(cartItemRepository.findByUserId(userId));
     }
 
 

@@ -77,8 +77,12 @@
                 <!-- LoGO -->
                 <div class="col-lg-3">
                     <div class="logo pb-sm-30 pb-xs-30">
-                        <a href="index.html">
+                        <!-- <a href="index.html">
                             <img src="images/menu/logo/1.jpg" alt="">
+                        </a> -->
+
+                        <a th:href="@{/}">
+                            <img src="images/menu/logo/1.jpg" alt="Logo">
                         </a>
                     </div>
                 </div>
@@ -188,7 +192,7 @@
                                 <span></span>
                                 <div class="minicart">
                                     
-                                    <p class="minicart-total">SUBTOTAL: <span  th:text="${totalPrice}">0.00 BDT</span></p>
+                                    <p class="minicart-total">SUBTOTAL: <span  th:text="${totalPrice}+৳">0.00 BDT</span></p>
                                     <div class="minicart-button">
                                         <a th:href="@{/checkout}" class="li-button li-button-dark li-button-fullwidth li-button-sm">
                                             <span>View Full Cart</span>
@@ -221,7 +225,8 @@
                     <div class="hb-menu hb-menu-2 d-xl-block">
                         <nav>
                             <ul>
-                                <li><a href="index.html">Home</a></li>
+                                <li><a th:href="@{/}">Home</a></li>
+
                                 <li class="megamenu-holder"><a href="shop-left-sidebar.html">Shop</a>
                                     <ul class="megamenu hb-megamenu">
                                         <li><a href="shop-left-sidebar.html">Shop Page Layout</a>

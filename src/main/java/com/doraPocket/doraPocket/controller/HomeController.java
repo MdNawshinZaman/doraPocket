@@ -1,11 +1,12 @@
 package com.doraPocket.doraPocket.controller;
-import org.springframework.ui.Model;
-import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
 import com.doraPocket.doraPocket.model.User;
 import com.doraPocket.doraPocket.service.CartService;
 
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class HomeController {
